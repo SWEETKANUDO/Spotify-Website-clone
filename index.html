@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify - Web Player:Music for everyone</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="logo">
+                <i class="fab fa-spotify"></i>
+                <span>Spotify</span>
+            </div>
+            <ul class="nav">
+                <li class="active"><i class="fas fa-home"></i> Home</li>
+                <li><i class="fas fa-search"></i> Search</li>
+                <li><i class="fas fa-book"></i> Your Library</li>
+                <li><i class="fas fa-plus-square"></i> Create Playlist</li>
+                <li><i class="fas fa-heart"></i> Liked Songs</li>
+            </ul>
+            <div class="playlists">
+                <h3>PLAYLISTS</h3>
+                <ul>
+                    <li>Today's Top Hits</li>
+                    <li>Discover Weekly</li>
+                    <li>Chill Hits</li>
+                    <li>Rock Classics</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <div class="top-bar">
+                <div class="navigation">
+                    <button class="back"><i class="fas fa-chevron-left"></i></button>
+                    <button class="forward"><i class="fas fa-chevron-right"></i></button>
+                </div>
+                <div class="user">
+                    <img src="assets/card3img.jpeg" alt="User">
+                    <span>MIHIR</span>
+                </div>
+            </div>
+
+            <div class="content">
+                <h1>Good afternoon</h1>
+                <div class="playlist-grid">
+                    <div class="playlist-card">
+                        <img src="assets/card1img.jpeg">
+                        <span>Today's Top Hits</span>
+                    </div>
+                    <div class="playlist-card">
+                        <img src="assets/card2img.jpeg" alt="Playlist">
+                        <span>Discover Weekly</span>
+                    </div>
+                    <div class="playlist-card">
+                        <img src="assets/card3img.jpeg" alt="Playlist">
+                        <span>Chill Hits</span>
+                    </div>
+                    <div class="playlist-card">
+                        <img src="assets/card4img.jpeg" alt="Playlist">
+                        <span>Rock Classics</span>
+                    </div>
+                    <div class="playlist-card">
+                        <img src="assets/card5img.jpeg" alt="Playlist">
+                        <span>Peaceful Piano</span>
+                    </div>
+                    <div class="playlist-card">
+                        <img src="assets/card6img.jpeg" alt="Playlist">
+                        <span>Deep Focus</span>
+                    </div>
+                </div>
+
+                <h2>Made For You</h2>
+                <div class="album-grid">
+                    <div class="album-card">
+                        <img src="assets/card1img.jpeg" alt="Album">
+                        <span class="title">Daily Mix 1</span>
+                        <span class="artist">Various Artists</span>
+                    </div>
+                    <div class="album-card">
+                        <img src="assets/card5img.jpeg" alt="Album">
+                        <span class="title">Daily Mix 2</span>
+                        <span class="artist">Various Artists</span>
+                    </div>
+                    <div class="album-card">
+                        <img src="assets/card6img.jpeg" alt="Album">
+                        <span class="title">Daily Mix 3</span>
+                        <span class="artist">Various Artists</span>
+                    </div>
+                    <div class="album-card">
+                        <img src="assets/card2img.jpeg" alt="Album">
+                        <span class="title">Daily Mix 4</span>
+                        <span class="artist">Various Artists</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Player -->
+        <div class="player">
+            <div class="song-info">
+                <img src="assets/card1img.jpeg" alt="Album">
+                <div class="song-details">
+                    <span class="title">Blinding Lights</span>
+                    <span class="artist">The Weeknd</span>
+                </div>
+                <i class="far fa-heart"></i>
+            </div>
+            <div class="player-controls">
+                <div class="controls">
+                    <i class="fas fa-random"></i>
+                    <i class="fas fa-step-backward"></i>
+                    <i class="fas fa-pause-circle"></i>
+                    <i class="fas fa-step-forward"></i>
+                    <i class="fas fa-redo"></i>
+                </div>
+                <div class="progress-bar">
+                    <span class="time">0:21</span>
+                    <div class="progress">
+                        <div class="progress-filled"></div>
+                    </div>
+                    <span class="time">3:20</span>
+                </div>
+            </div>
+            <div class="player-options">
+                <i class="fas fa-list"></i>
+                <i class="fas fa-laptop"></i>
+                <i class="fas fa-volume-up"></i>
+                <div class="volume-bar">
+                    <div class="progress">
+                        <div class="progress-filled"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
