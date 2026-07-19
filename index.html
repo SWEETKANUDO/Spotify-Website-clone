@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="icon" href="./Spotify_photos/logo.png" />
+    <title>Spotify - Web Player: for everyone</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="main">
+      <div class="sidebar">
+        <div class="nav">
+          <div class="nav-options" style="opacity: 1">
+            <i class="fa-solid fa-house"></i>
+            <a href="#">Home</a>
+          </div>
+          <div class="nav-options">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <a href="#">Search</a>
+          </div>
+        </div>
+
+        <div class="library">
+          <div class="options">
+            <div class="library-options nav-options">
+              <img src="./Spotify_photos/library_icon.png" alt="library_icon" />
+              <a href="#">Your Library</a>
+            </div>
+            <div class="icons">
+              <i class="fa-solid fa-plus"></i>
+              <i class="fa-solid fa-arrow-right"></i>
+            </div>
+          </div>
+          <div class="boxes">
+            <div class="box-1">
+              <p class="box-p1">Create your first playlist</p>
+              <p class="box-p2">it's easy we'll help you</p>
+              <button class="badge">create playlist</button>
+            </div>
+
+            <div class="box-2">
+              <p class="box-p1">Let's start some podcast to follow</p>
+              <p class="box-p2">We'll keep you updated on new episodes</p>
+              <button class="badge">Browse podcasts</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="main-content">
+        <div class="sticky-navbar">
+          <div class="sticky-nav-icons">
+            <img src="./Spotify_photos/backward_icon.png" alt="backward_icon" />
+
+            <img
+              src="./Spotify_photos/forward_icon.png"
+              class="hide"
+              alt="forward_icon"
+            />
+          </div>
+          <div class="sticky-nav-options">
+            <button class="badge nav-items hide">Explorer Premium</button>
+            <button class="badge nav-items dark-badge">
+              <i class="fa-solid fa-circle-down"></i>Install App
+            </button>
+            <i class="fa-solid fa-user nav-items user"></i>
+          </div>
+        </div>
+
+        <h2>Recently Played</h2>
+        <div class="card-container">
+          <div class="card">
+            <img src="./Spotify_photos/card1img.jpeg" class="card-img" alt="" />
+            <p class="card-title">Top - 50 Global</p>
+            <p class="card-info">Your daily updates of the most played...</p>
+          </div>
+        </div>
+
+        <h2>Trending now near you</h2>
+        <div class="card-container">
+          <div class="card">
+            <img src="./Spotify_photos/card3img.jpeg" class="card-img" alt="" />
+            <p class="card-title">Mere pass tum ho</p>
+            <p class="card-info">Silent ocean, Lofi mix - 1 min music...</p>
+          </div>
+
+          <div class="card">
+            <img src="./Spotify_photos/card2img.jpeg" class="card-img" alt="" />
+            <p class="card-title">mahiye jinaa Sohna</p>
+            <p class="card-info">Your daily updates of the most played...</p>
+          </div>
+
+          <div class="card">
+            <img src="./Spotify_photos/card4img.jpeg" class="card-img" alt="" />
+            <p class="card-title">Alter Ego naa ready</p>
+            <p class="card-info">Your daily updates of the most played...</p>
+          </div>
+
+          <div class="card">
+            <img src="./Spotify_photos/card3img.jpeg" class="card-img" alt="" />
+            <p class="card-title">Mere pass tum ho</p>
+            <p class="card-info">Silent ocean, Lofi mix - 1 min music...</p>
+          </div>
+
+          <div class="card">
+            <img src="./Spotify_photos/card2img.jpeg" class="card-img" alt="" />
+            <p class="card-title">mahiye jinaa Sohna</p>
+            <p class="card-info">Your daily updates of the most played...</p>
+          </div>
+        </div>
+
+        <div class="f-chart">
+          <div><h2>Featured Charts</h2></div>
+          <div><button class="badge">Show All</button></div>
+        </div>
+        <div class="card-container">
+          <div class="card">
+            <img
+              src="./Spotify_photos/card5img.jpeg "
+              class="card-img"
+              alt="top songs - global"
+            />
+            <p class="card-title">Top Songs - Global</p>
+            <p class="card-info">Your daily updates of the most played...</p>
+          </div>
+
+          <div class="card">
+            <img
+              src="./Spotify_photos/card6img.jpeg"
+              class="card-img"
+              alt="top songs- india"
+            />
+            <p class="card-title">Top Songs - India</p>
+            <p class="card-info">Your daily updates of the most played...</p>
+          </div>
+
+          <div class="card">
+            <img
+              src="./Spotify_photos/card1img.jpeg"
+              class="card-img"
+              alt="top-50 Global"
+            />
+            <p class="card-title">Top - 50 Global</p>
+            <p class="card-info">Your daily updates of the most played...</p>
+          </div>
+        </div>
+        <div class="footer">
+          <div class="line"></div>
+        </div>
+      </div>
+      <div class="music-player">
+        <div class="album">
+          <div class="album-items">
+            <div class="album-song">
+              <img
+                src="./Spotify_photos/album_picture.jpeg"
+                alt=""
+                class="album-img1"
+              />
+              <div class="album-text">
+                <p class="text-1">Downer's at dusk</p>
+                <p class="text-2">Talha anjum</p>
+              </div>
+            </div>
+            <div class="album-icon">
+              <img
+                src="./Spotify_photos/album_icon1.png"
+                alt=""
+                class="album-img2"
+              />
+              <img
+                src="./Spotify_photos/album_icon2.png"
+                alt=""
+                class="album-img3"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="player">
+          <div class="player-controls">
+            <img
+              src="./Spotify_photos/player_icon1.png"
+              alt=""
+              class="player-controls-icon"
+            />
+            <img
+              src="./Spotify_photos/player_icon2.png"
+              alt=""
+              class="player-controls-icon"
+            />
+            <img
+              src="./Spotify_photos/player_icon3.png"
+              alt=""
+              class="player-controls-icon"
+              style="opacity: 1; height: 2rem"
+            />
+            <img
+              src="./Spotify_photos/player_icon4.png"
+              alt=""
+              class="player-controls-icon"
+            />
+            <img
+              src="./Spotify_photos/player_icon5.png"
+              alt=""
+              class="player-controls-icon"
+            />
+          </div>
+          <div class="playback-bar">
+            <span class="current-time">00:00</span>
+            <input
+              type="range"
+              class="process-bar"
+              min="0"
+              max="100"
+              step="1"
+            />
+            <span class="end-time">3:33</span>
+          </div>
+        </div>
+        <div class="controls">
+          <div class="controls-icon">
+            <img src="./Spotify_photos/controls_icon1.png" alt="" />
+            <img src="./Spotify_photos/controld_icon2.png" alt="" />
+            <img
+              src="./Spotify_photos/controls_icon3.png"
+              alt=""
+              style="height: 1.75rem"
+            />
+            <img
+              src="./Spotify_photos/controls_icon4.png"
+              alt=""
+              style="height: 1.5rem"
+            />
+            <img
+              src="./Spotify_photos/controls_icon5.png"
+              alt=""
+              style="height: 2.5rem"
+            />
+            <input type="range" min="1" max="100" step="1" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
