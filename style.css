@@ -306,3 +306,321 @@ a {
 .controls input {
   width: 6rem;
 }
+
+
+/* ============================================================
+   RESPONSIVE OVERHAUL — mobile, tablet & laptop (Spotify-style)
+   ============================================================ */
+
+/* ---- Off-canvas controls (hidden on desktop by default) ---- */
+.menu-toggle {
+  display: none;
+  font-size: 1.35rem;
+  margin-right: 1rem;
+  cursor: pointer;
+}
+.sidebar-close {
+  display: none;
+  font-size: 1.35rem;
+  padding: 0.9rem 0.9rem 0 0.9rem;
+  opacity: 0.8;
+  cursor: pointer;
+}
+.overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 40;
+}
+.overlay.active {
+  display: block;
+}
+
+/* Base responsive containers */
+* {
+  box-sizing: border-box;
+}
+img {
+  max-width: 100%;
+}
+
+/* ---- Cards: fluid grid instead of fixed width/margins ---- */
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 1.25rem;
+  margin-top: 1.25rem;
+}
+.card {
+  width: 100%;
+  margin: 0;
+}
+
+/* =========================================================
+   LAPTOP / SMALL DESKTOP (<=1180px): slightly tighter layout
+   ========================================================= */
+@media (max-width: 1180px) {
+  .sidebar {
+    width: 17rem;
+  }
+  .box-1,
+  .box-2 {
+    width: 100%;
+  }
+}
+
+/* =========================================================
+   TABLET (<=1024px): sidebar collapses to icon-only rail,
+   music player shrinks — same idea as Spotify's tablet view
+   ========================================================= */
+@media (max-width: 1024px) {
+  .sidebar {
+    width: 5.5rem;
+    margin-right: 0.5rem;
+    overflow: hidden;
+  }
+  .nav-options a,
+  .library-options a,
+  .box-p1,
+  .box-p2 {
+    display: none;
+  }
+  .nav-options,
+  .library-options {
+    display: flex;
+    justify-content: center;
+    padding: 0.5rem;
+  }
+  .icons,
+  .badge {
+    display: none;
+  }
+  .library {
+    padding: 0.25rem;
+  }
+  .box-1,
+  .box-2 {
+    height: 3.5rem;
+    width: 3.5rem;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem auto;
+  }
+  .box-1::before {
+    content: "\f0fe";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    font-size: 1.2rem;
+  }
+  .box-2::before {
+    content: "\f130";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    font-size: 1.2rem;
+  }
+
+  .album {
+    width: 30%;
+  }
+  .text-1,
+  .text-2 {
+    max-width: 8rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .album-icon {
+    display: none;
+  }
+  .controls {
+    width: 20%;
+  }
+  .controls-icon img {
+    height: 1.5rem;
+  }
+  .controls-icon img:nth-child(1),
+  .controls-icon img:nth-child(2) {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    overflow-y: auto;
+  }
+  .main {
+    padding: 0.4rem;
+    height: auto;
+    min-height: 100vh;
+  }
+  .menu-toggle {
+    display: inline-block;
+  }
+  .sticky-nav-icons {
+    display: flex;
+    align-items: center;
+  }
+  .sticky-nav-icons img {
+    display: none;
+  }
+  .sidebar-close {
+    display: block;
+    text-align: right;
+  }
+
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 78%;
+    max-width: 300px;
+    transform: translateX(-105%);
+    transition: transform 0.25s ease;
+    z-index: 50;
+    border-radius: 0;
+  }
+  .sidebar.active {
+    transform: translateX(0);
+  }
+  .nav-options a,
+  .library-options a,
+  .box-p1,
+  .box-p2,
+  .icons {
+    display: block;
+  }
+  .icons {
+    display: flex;
+  }
+  .nav-options,
+  .library-options {
+    justify-content: flex-start;
+  }
+  .box-1,
+  .box-2 {
+    width: 100%;
+    height: auto;
+    min-height: 7rem;
+    padding: 0.75rem 1.25rem;
+    display: block;
+    border-radius: 0.5rem 0.75rem;
+  }
+  .box-1::before,
+  .box-2::before {
+    content: none;
+  }
+  .badge {
+    display: inline-block;
+  }
+
+  .main-content {
+    padding: 0 0.75rem;
+    margin-bottom: 90px; 
+  }
+  .sticky-navbar {
+    padding: 0.75rem 0;
+  }
+  h2 {
+    font-size: 1.1rem;
+  }
+
+  .card-container {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 0.75rem;
+  }
+  .card {
+    padding: 0.65rem;
+  }
+  .card-title {
+    font-size: 0.8rem;
+  }
+  .card-info {
+    font-size: 0.72rem;
+  }
+
+  .music-player {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    height: auto;
+    min-height: 60px;
+    padding: 0.4rem 0.6rem;
+  }
+  .album {
+    width: 40%;
+  }
+  .album-items {
+    padding: 0.25rem;
+    margin-left: 0;
+  }
+  .album-img1 {
+    height: 2.25rem;
+    width: 2.75rem;
+    margin-right: 0.5rem;
+  }
+  .text-1,
+  .text-2 {
+    max-width: 6.5rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .album-icon {
+    display: none;
+  }
+  .player {
+    width: 55%;
+    order: 3;
+    flex-basis: 100%;
+  }
+  .player-controls {
+    margin-right: 0;
+  }
+  .player-controls-icon {
+    margin-right: 1rem;
+  }
+  .player-controls-icon:nth-child(1),
+  .player-controls-icon:nth-child(5) {
+    display: none;
+  }
+  .end-time,
+  .current-time {
+    font-size: 0.7rem;
+  }
+  .controls {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .card-container {
+    grid-template-columns: repeat(auto-fill, minmax(105px, 1fr));
+    gap: 0.6rem;
+  }
+  .album {
+    width: 55%;
+  }
+  .player {
+    width: 100%;
+    order: 3;
+  }
+  .process-bar {
+    width: 85%;
+  }
+  .sticky-nav-options .badge.dark-badge {
+    padding: 0.25rem 0.6rem;
+    font-size: 0.8rem;
+  }
+  .sticky-nav-options .badge.dark-badge i {
+    margin-right: 0.3rem;
+  }
+  .user {
+    font-size: 1.25rem;
+  }
+  .footer {
+    height: 140px;
+  }
+}
